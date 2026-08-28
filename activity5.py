@@ -3,7 +3,7 @@
 a = 8
 b = 6 
 
-sum = a+b 
+sum = a + b 
 difference = a - b 
 product = a * b
 quotient = a / b
