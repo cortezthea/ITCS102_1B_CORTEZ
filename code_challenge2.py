@@ -2,7 +2,8 @@
 
 
 money= input ("Amount:")
-print ("=========================== PH BANK DENOMINATION ===========================")
+print ()
+print ("========================= PH BANK DENOMINATION =========================")
 print ("Amount to Deposit -->", money)
 
 print ()
