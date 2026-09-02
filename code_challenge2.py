@@ -6,39 +6,39 @@ print ("Amount to Deposit -->", money)
 
 print ()
 
-a = money // 1000
+a = int (money) // 1000
 print ("1000:", a)
 money_left = money % 1000
 
-b = money_left // 500
+b = int (money_left) // 500
 print ("500 :", b)
 money_left = money_left % 500
 
-c = money_left // 200
+c = int (money_left) // 200
 print ("200 :", c)
 money_left = money_left % 200
 
-d = money_left //100
+d = int (money_left) //100
 print ("100 :", d)
 money_left = money_left % 100
 
-e = money_left // 50 
+e = int (money_left) // 50 
 print ("50  :", e)
 money_left = money_left % 50
 
-f= money_left // 20
+f= int (money_left) // 20
 print ("20  :", f)
 money_left = money_left % 20
 
-g = money_left // 10 
+g = int (money_left) // 10 
 print ("10  :", g)
 money_left = money_left % 10
 
-h = money_left // 5
+h = int (money_left) // 5
 print ("5   :", h)
 money_left = money_left % 5
 
-i = money_left // 1
+i = int (money_left) // 1
 print ("1   :", i)
 money_left = money_left % 1
 
