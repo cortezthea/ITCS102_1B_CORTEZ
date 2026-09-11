@@ -9,20 +9,8 @@ item_type = input ("Type of Item:")
 is_fragile = input("Fragile (Yes/No):")
 weight = float (input("Weight (kg):"))
 distance = float (input("Distance (km): "))
-
-is_express = input("Express (T-yes/F-no):")
-
-if is_express == "T":
-	is_express = True 
-else: 
-	is_express = False
-
-is_international = input("International (T-yes/F-no):")
-
-if is_international == "T":
-	is_international = True 
-else: 
-	is_international = False
+is_express = bool(input("Is the delivery express? (yes/no): ") == "yes")
+is_international = bool(input("Is the item international? (yes/no): ") == "yes")
 
 
 #(Calculation)
@@ -46,8 +34,9 @@ elif weight > 30 or distance >1000:
 else:
 	total = base_cost
 	
+
 print ()
-print ("=========TOTAL SHIPPING CHARGES=========")
+print ("=========TOTAL SHIPPING DETAILS=========")
 print ("Sender Name     :", sender_name)
 print ("Type of Item    :", item_type)
 print ("Fragile (Yes|No):", is_fragile) 
