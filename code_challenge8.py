@@ -1,5 +1,5 @@
 #Code Challenge no. 8
-# DIAMOND
+# DIAMOND (LOOPS)
 
 for x in range (1, 5):   #top-half
     for y in range (4 - x):
