@@ -3,46 +3,46 @@
 # 2D Dimensional list
 
 #1 (traits)
-hiccup = ["courageous","a leader","compassionate"]
-astrid =  ["independent","determined","brave"]
-toothless = ["loyal","intelligent","playful"]
+hiccup = ["courageous","responsible","He changed how humans and dragons coexist."]
+astrid =  ["independent","determined","A fierce and fearless Viking warrior"]
+toothless = ["loyal","intelligent","The loyal and playful Night Fury"]
 stoick = ["protective","courageous","cool"]
 print ()
-tink = ["inventive","stubborn","curious"]
-silvermist = ["gentle","optimistic","empathetic"]
-vidia = ["sarcastic","independent","competitive"]
-iridessa = ["cautious","anxious","responsible"]
-rosetta = ["charming","expressive","elegant"]
-fawn = ["adventurous","compassionate","fearless"]
+tink = ["inventive","stubborn","A tinker fairy who can fix almost anything."]
+silvermist = ["The gentle water fairy","optimistic","empathetic"]
+vidia = ["sarcastic","independent","The fastest-flying fairy"]
+iridessa = ["cautious","anxious","A responsible light fairy."]
+rosetta = ["charming","expressive","The fashionable garden fairy"]
+fawn = ["adventurous","compassionate","The adventurous animal fairy with a special love for creatures"]
 print ()
-woody = ["loyal","leader","responsible"]
-buzz = ["brave","confident","heroic"]
-jessie = ["energetic","adventurous","emotional"]
+woody = ["loyal","leader","Andy's loyal cowboy doll"]
+buzz = ["brave","confident","The space ranger"]
+jessie = ["energetic","adventurous","The energetic cowgirl with a fearless spirit"]
 
 print ()
-vee= ["friendly","optimistic","adaptable"]
-poppy= ["creative","outgoing","supportive"]
-bridget=["shy","kindhearted","thoughtful"]
+vee= ["friendly","optimistic","A friendly vampire girl trying to fit into the human world"]
+poppy= ["creative","outgoing","The outgoing and creative best friend"]
+bridget=["shy","kindhearted","The shy but sweet girl"]
 print ()
-elena=["courageous","determined","strong"]
-naomi=["practical","resourceful","assertive"]
-skylar=["loyal","affectionate","energetic"]
+elena=["courageous","determined","The brave princess destined to rule the kingdom of Avalor"]
+naomi=["practical","resourceful","The clever and resourceful friend who always has a practical solution"]
+skylar=["loyal","affectionate","The magical flying jaquin"]
 print()
-sara=["Imaginative","Resilient","Generous"]
-lavinia=["Jealous","Arrogant","Insecure"]
-miss_minchin=["Cruel","Authoritarian","Greedy","Prideful"]
+sara=["Imaginative","Resilient","The little princess who never loses her kindness"]
+lavinia=["Jealous","Arrogant","A jealous classmate who constantly seeks attention"]
+miss_minchin=["Cruel","Authoritarian","Greedy","The cruel headmistress"]
 
 print ()
-harry=["Courageous","Selfless","Impulsive"]
-hermione=["Intelligent","Analytical","Diligent","Perfectionistic"]
-ron=["Humorous","Loyal", "Insecure","Protective"]
+harry=["Courageous","Selfless","The Boy Who Lived"]
+hermione=["Intelligent","Analytical","Diligent","The brightest witch of her age"]
+ron=["Humorous","Loyal", "Insecure","Harry's loyal best friend"]
 print ()
-jesse=["Imaginative","Artistic","Sensitive"]
-leslie=["Adventurous","Creative","Fearless"]
+jesse=["Imaginative","Artistic","The artistic boy who discovers the magic of imagination"]
+leslie=["Adventurous","Creative","The imaginative girl who creates the magical kingdom of Terabithia"]
 print ()
-jack=["Courageous","Humble","Selfless"]
-princess_isabelle=["Intelligent","Strong-willed","Compassionate"]
-elmont=["Disciplined","Brave","Loyal"]
+jack=["Courageous","Humble","A giant-slaying hero"]
+princess_isabelle=["Intelligent","Strong-willed","The adventurous princess"]
+elmont=["Disciplined","Brave","The courageous leader of the royal guard"]
 
 
 #2(Characters)
@@ -91,13 +91,13 @@ for category, titles in shows.items():
         for name,info in characters.items():
             print ("   "+ name)
             print ("     Description:", info [0])
-            print ("     Power:", info [1])
+            print ("     Traits:", info [1])
 print ()
 
 print ("=== 5. Count every character ===")
 count = 0
-for titles in shows.values ():
-    for characters in title.values ():
+for titles in shows.values():
+    for characters in titles.values():
         for name in characters:
             count = count+1
 print ("Total characters:",count)
@@ -106,7 +106,7 @@ print ()
 print ("==== 6. Search for a character ===")
 search = "rem"
 found = False
-for category, titles in anime.items ():
+for category, titles in shows.items ():
     for title,characters in titles.items ():
         if search in characters:
             print (search, "is from", title, "("+category+")")
