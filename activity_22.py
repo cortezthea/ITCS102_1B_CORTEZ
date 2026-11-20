@@ -3,7 +3,7 @@
 # 2D Dimensional list
 
 #1 (traits)
-hiccup = ["courageous","resourceful","compassionate"]
+hiccup = ["courageous","a leader","compassionate"]
 astrid =  ["independent","determined","brave"]
 toothless = ["loyal","intelligent","playful"]
 stoick = ["protective","courageous","cool"]
@@ -36,8 +36,6 @@ print ()
 harry=["Courageous","Selfless","Impulsive"]
 hermione=["Intelligent","Analytical","Diligent","Perfectionistic"]
 ron=["Humorous","Loyal", "Insecure","Protective"]
-draco=["Arrogant","Prejudiced","Competitive"]
-snape=["Intelligent","Secretive","Sacrificial"]
 print ()
 jesse=["Imaginative","Artistic","Sensitive"]
 leslie=["Adventurous","Creative","Fearless"]
@@ -48,26 +46,71 @@ elmont=["Disciplined","Brave","Loyal"]
 
 
 #2(Characters)
-how_to_train_your_dragon = [hiccup, astrid,toothless,stoick]
-tinkerbell = [tink,silvermist,vidia,iridessa,rosetta,fawn]
-toy_story = [woody,buzz,jessie] 
+how_to_train_your_dragon = {"Hiccup":hiccup,"Astrid":astrid,"Toothless":toothless,"Stoick":stoick}
+tinkerbell = {"Tink":tink,"Silvermist":silvermist,"Vidia":vidia,"Iridessa":iridessa,"rosetta":rosetta,"Fawn":fawn}
+toy_story = {"Woody":woody,"Buzz":buzz,"Jessie":jessie}
 print ()
-vampirina = [vee,poppy,bridget]
-elena_of_avalor = [elena,naomi,skylar]
-princess_sarah = [sara,lavinia,miss_minchin]
+vampirina = {"Vee":vee,"Poppy":poppy,"Bridget":bridget}
+elena_of_avalor = {"Elena":elena,"Naomi":naomi,"Skylar":skylar}
+princess_sarah = {"Sara":sara,"Lavinia":lavinia,"Miss":miss_minchin}
 print()
-harry_potter = [harry,hermione,ron,draco,snape]
-bridge_to_terabithia = [jesse,leslie]
-jack_the_giant_slayer = [jack,princess_isabelle,elmont]
+harry_potter = {"Harry":harry,"Hermione":hermione,"ron":ron}
+bridge_to_terabithia = {"Jesse":jesse,"Leslie":leslie}
+jack_the_giant_slayer = {"Jack":jack,"Princess":princess_isabelle,"Elmont":elmont}
 
 #3 (Categories)
-peak = [how_to_train_your_dragon,tinkerbell,toy_story]
-animated_c = [vampirina,elena_of_avalor,princess_sarah]
-fantasy = [harry_potter,bridge_to_terabithia,jack_the_giant_slayer]
+peak = {"HTTYD":how_to_train_your_dragon,"Tinkerbell":tinkerbell,"Toy Story":toy_story}
+animated_c = {"Vampirina":vampirina,"EOA":elena_of_avalor,"Princess Sara":princess_sarah}
+fantasy = {"Harry Potter":harry_potter,"BTT":bridge_to_terabithia,"JTGS":jack_the_giant_slayer}
 
-#4 (Dictionary)
-shows {"memorable cartoons":peak, "fav animated cartoons":animated_c,"loved fantasy shows":fantasy}
+#4 (Main Dictionary)
+shows = {"Memorable Cartoons":peak, "Fav animated cartoons":animated_c,"Loved fantasy shows":fantasy}
 
-print (shows["memorable cartoons"])
-print (shows["fav animated cartoons"])
-print (shows["loved fantasy shows:"])
+#1
+print ("=== 1. Going one at a time ===")
+print (shows["Memorable Cartoons"]["HTTYD"]["Hiccup"][1])
+print ()
+
+print ("=== 2. Loop level 1: Categories ===")
+for category in shows:
+    print (category)
+print ()
+
+print ("=== 3. Loop levels 1-2: Categories and Titles ===")
+for category, titles in shows.items ():
+    print (category)
+    for title in titles:
+        print (" -", title)
+print ()
+
+print ("=== 4. Loop all levels ===")
+for category, titles in shows.items():
+    print (category)
+    for title,characters in titles.items():
+        print (" " + title)
+        for name,info in characters.items():
+            print ("   "+ name)
+            print ("     Description:", info [0])
+            print ("     Power:", info [1])
+print ()
+
+print ("=== 5. Count every character ===")
+count = 0
+for titles in shows.values ():
+    for characters in title.values ():
+        for name in characters:
+            count = count+1
+print ("Total characters:",count)
+print ()
+
+print ("==== 6. Search for a character ===")
+search = "rem"
+found = False
+for category, titles in anime.items ():
+    for title,characters in titles.items ():
+        if search in characters:
+            print (search, "is from", title, "("+category+")")
+            print ("Power:", characters [search][1])
+            found = True
+if found == False:
+    print (search, "not found")
